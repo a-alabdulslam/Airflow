@@ -141,3 +141,8 @@ cython_debug/
 # Local Development
 logs/
 plugins/
+Azure_function/__azurite_db_blob__.json
+Azure_function/__azurite_db_blob_extent__.json
+Azure_function/__azurite_db_queue__.json
+Azure_function/__azurite_db_queue_extent__.json
+Azure_function/__azurite_db_table__.json

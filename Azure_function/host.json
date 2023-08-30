@@ -16,10 +16,7 @@
     "durableTask": {
       "maxConcurrentActivityFunctions": 10,
       "maxConcurrentOrchestratorFunctions": 10,
-      "hubName": "fruitsforecast",
-      "storageProvider": {
-        "connectionStringName": "FruitsForecastDurableHubStorage"
-      }
+      "hubName": "DurableFunctionsHub"
     }
   },
   "functionTimeout": "00:10:00"
