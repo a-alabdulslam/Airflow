@@ -5,7 +5,7 @@
 For first-time setup, run the initialization container:
 
 ```powershell
-mkdir -p ./logs ./plugins
+mkdir -p ./logs,./plugins
 docker-compose up airflow-init
 ```
 
