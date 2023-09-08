@@ -18,7 +18,7 @@ def get_weather(city):
     hook = HttpHook(http_conn_id="ninja_api", method="GET")
     response = hook.run("/weather", headers=headers,data=params).json()
 
-    with open(f'dags/Example3/output/{city}_current_weather.json', 'w') as outfile:
+    with open(f'dags/Example4/output/{city}_current_weather.json', 'w') as outfile:
         json.dump(response, outfile)
 
 @dag(
