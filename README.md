@@ -31,3 +31,11 @@ When done, the local env could be turned off by simply quitting the terminal com
 ```powershell
 docker-compose down
 ```
+
+## Add Airflow connections
+
+After first-time setup, run the script add_connections.ps1 to add the connections:
+
+```powershell
+./add_connections.ps1
+```
