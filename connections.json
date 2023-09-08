@@ -1,0 +1,12 @@
+{
+    "ninja_api": {
+        "conn_type": "http",
+        "host": "https://api.api-ninjas.com/v1",
+        "schema":"https"
+    },
+    "AF_url": {
+        "conn_type": "http",
+        "host": "host.docker.internal",
+        "port": 7071
+    }
+}
