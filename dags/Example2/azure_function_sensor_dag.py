@@ -5,12 +5,11 @@ from airflow.providers.http.sensors.http import HttpSensor
 
 
 def call_AF():
-    import json
-    from urllib.parse import urlparse, parse_qs
+    from urllib.parse import urlparse
     from airflow.providers.http.hooks.http import HttpHook
 
     hook = HttpHook(http_conn_id="AF_url", method="GET")
-    response = hook.run().json()
+    response = hook.run("/api/Orchestrator").json()
     status_query_get_uri = response["statusQueryGetUri"]
     parsed_url = urlparse(status_query_get_uri)
     path = parsed_url.path
@@ -48,7 +47,7 @@ with DAG(
 
     wait_for_AF = HttpSensor(
         task_id="wait_for_AF",
-        http_conn_id="AF_check",
+        http_conn_id="AF_url",
         endpoint="{{ti.xcom_pull('call_AF')}}",
         response_check=check_response,
         mode="reschedule",
